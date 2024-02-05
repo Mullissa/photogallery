@@ -24,24 +24,31 @@ header h1 {
 
 nav {
     background-color: var(--color-primary);
-    display: grid;
+    display: flex;
     justify-content: right;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 nav li {
     list-style: none;
+    display: grid;
 }
 
 nav a {
     font-size: 1.5em;
     text-decoration: none;
     color: var(--color-secondary);
+    text-transform: uppercase;
+    justify-content: center;
 }
 
 a[href="#top"] {
-    position: fixed;
-    color: var(--color-primary);
-    bottom: 0px;
+    display: none;
 }
 
 main {
@@ -56,16 +63,17 @@ main h2 {
 
 main > p {
     padding: 5px;
+    margin: 0;
 }
 
-main > section {
+main > div {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 1em;
     padding: 20px;
 }
 
-main > section > div {
+main > div > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,12 +81,12 @@ main > section > div {
     position: relative;
 }
 
-main > section > div img {
+main > div > div img {
     width: 100%;
     height: auto;
 }
 
-main > section > div p {
+main > div > div p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,73 +94,73 @@ main > section > div p {
     font-size: 1em;
 }
 
-main > section > div:nth-child(1) p {
+main > div > div:nth-child(1) p {
     bottom: 0px;
     color: var(--color-secondary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(2) p {
+main > div > div:nth-child(2) p {
     top: 0px;
     color: var(--color-secondary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(3) p {
+main > div > div:nth-child(3) p {
     bottom: 0px;
     color: var(--color-secondary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(4) p {
+main > div > div:nth-child(4) p {
     top: 0px;
     color: var(--color-primary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(5) p {
+main > div > div:nth-child(5) p {
     top: 0px;
     color: var(--color-primary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(6) p {
+main > div > div:nth-child(6) p {
     bottom: 0px;
     color: var(--color-primary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(7) p {
+main > div > div:nth-child(7) p {
     bottom: 0px;
     color: var(--color-secondary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(8) p {
+main > div > div:nth-child(8) p {
     top: 0px;
     color: var(--color-primary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(9) p {
+main > div > div:nth-child(9) p {
     top: 0px;
     color: var(--color-primary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(10) p {
+main > div > div:nth-child(10) p {
     top: 0px;
     color: var(--color-primary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(11) p {
+main > div > div:nth-child(11) p {
     top: 0px;
     color: var(--color-primary);
     font-weight: bold;
 }
 
-main > section > div:nth-child(12) p {
+main > div > div:nth-child(12) p {
     top: 0px;
     color: var(--color-primary);
     font-weight: bold;
@@ -170,8 +178,8 @@ p {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
     padding: 20px;
 }
@@ -180,7 +188,7 @@ form > div {
     display: grid;
     gap: 10px;
     padding: 5px;
-    
+    justify-content: center;
 }
 
 form > div label {
@@ -202,13 +210,6 @@ form > div > input::placeholder {
     text-transform: uppercase;
 }
 
-footer {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    text-align: center;
-    padding: 30px;
-}
-
 input[type="submit"] {
     background-color: var(--color-accent);
     border-radius: 10px;
@@ -218,4 +219,56 @@ input[type="submit"] {
     height: 40px;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 880px) {
+    nav {
+        justify-content: center;
+    }
+
+    main > div {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    main > div > div:nth-child(3) p {
+        bottom: 160px;
+    }
+
+    form > div input {
+        width: 700px;
+    }
+
+    input[type="submit"] {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    nav {
+        justify-content: center;
+    }
+
+    main > div {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    main > div > div:nth-child(3) p {
+        bottom: 0px;
+    }
+
+    form > div input {
+        width: 300px;
+    }
+
+    input[type="submit"] {
+        width: 200px;
+    }
 }

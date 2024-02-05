@@ -24,10 +24,11 @@
         <h2>About</h2>
             <p>Hello!</p>
             <p>I’m TK and I’m a photographer. I love looking at life through the lens of my camera. Landscape photography is my speciality and it’s taken me all over the world.</p> 
+            
         <h2>Gallery</h2>
         <p>Here are some highlights of my work. The locations and year are in the caption.</p> 
 
-        <section>
+        <div>
             <div>
                 <img src="images/Chile.png" alt="beach at sunset in Chile">
                 <p>Chile, 2001</p>
@@ -88,41 +89,35 @@
                 <img src="images/Wyoming.png" alt="lake view with towering trees and mountains off in the distance">
                 <p>Wyoming, 2021</p>
             </div>
-        </section>
+        </div>
 
-        <div class="contact">
+        <section class="contact">
             <h2>Contact</h2>
 
-        <p>Please fill out this form and I’ll connect with you soon.</p>
+            <p>Please fill out this form and I’ll connect with you soon.</p>
         
-        <form>
-            <div>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-            </div>
-
-            <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter Your Email Address" required>
-            </div>
-
-            <div>
-                <label for="text">Message</label>
-                <input type="text" id="text" name="text" placeholder="What can I help you with?">
-            </div>
-
-            <div>
-                <input type="submit" value="Submit">
-            </div>
-            
-
-        </form>
-
         
+            <form>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                </div>
 
-    </div>
-        
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email Address" required>
+                </div>
 
+                <div>
+                    <label for="text">Message</label>
+                    <input type="text" id="text" name="text" placeholder="What can I help you with?">
+                </div>
+
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <p class="small">&copy;Copyright 2021 TK Photography</p>
